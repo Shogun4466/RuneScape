@@ -1,0 +1,210 @@
+@font-face {
+    font-family: 'runescape';
+    src: url('fonts/runescape/runescape.eot');
+    src: url('fonts/runescape/runescape.eot?#iefix') format('embedded-opentype'),
+    url('fonts/runescape/runescape.woff') format('woff'),
+    url('fonts/runescape/runescape.ttf') format('truetype'),
+    url('fonts/runescape/runescape.svg') format('svg');
+}
+
+body, html {
+    font-family: sans-serif;
+    background-image: url('images/backgrounds/header.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    color: white;
+}
+
+a:link {color: white;}
+a:visited {color: white;}
+a:hover {color: black;}
+a:active {color: white;}
+
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+a:active {text-decoration: none;}
+
+ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    top: 0;
+    width: 30rem;
+    height: 50px;
+}
+
+li {
+    float: left;
+    z-index: 5;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+    color: white;
+    transition: .5s;
+}
+
+h1, h2 {
+    font-family: "runescape", sans-serif;
+    color: #947bb7;
+}
+
+h1 {
+    text-align: center;
+    font-size: 250%;
+}
+
+.error,.success {
+    width: calc(100% - 20px);
+    height: 40px;
+    background: #f44336;
+    border-bottom: 3px solid rgba(0,0,0,0.2);
+    border-radius: 2px;
+    /*display: none;*/
+    line-height: 40px;
+    padding: 0 10px;
+    text-align: center;
+    overflow: hidden;
+    font-size: 14px;
+}
+.success {
+    background: #28bb20;
+    /*font-size: 20px;*/
+}
+
+.align {
+    vertical-align: middle;
+}
+
+.center {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.hover:hover {
+    background-color: rgba(0, 0, 0, 0.2)!important;
+    transition: all .2s ease-in!important;
+}
+
+#header {
+    margin: 0 auto;
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background: rgba(51, 51, 51, .9);
+    position: sticky;
+}
+
+#header-menu {
+    margin: 0 auto;
+}
+
+#header-menu-left {
+    float: left;
+}
+
+#header-menu-right {
+    float: left;
+}
+
+#header-menu-banner {
+    float: left;
+    margin: 0 auto;
+}
+
+#header-avatar {
+    margin-left: -100px;
+    z-index: 1;
+    background: #333;
+}
+
+#header-avatar img {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.page {
+    /*background: rgb(124, 93, 166, .9);*/
+    background: rgba(51, 51, 51, .9);
+    width: 60rem;
+    margin: 10rem auto;
+    padding: 10px;
+}
+
+.badge-container {
+    display: flex;
+    justify-content: center;
+}
+
+.badge-item {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/*table {
+	border-collapse: collapse;
+	width: 100%;
+	transition: all .2s ease-in;
+}
+
+table td, table th {
+	border: 1px solid #ddd;
+	padding: 8px;
+	transition: all .2s ease-in;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+table tr:hover {background-color: #ddd;}
+
+table th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #4CAF50;
+	color: white;
+}*/
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    transition: all .2s ease-in;
+}
+
+table td, table th {
+    padding: 3px 5px;
+    border-bottom: 1px solid black;
+    min-width: 3rem;
+}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+}
