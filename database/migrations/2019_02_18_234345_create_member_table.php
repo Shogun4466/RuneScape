@@ -14,15 +14,15 @@ class CreateMemberTable extends Migration
     public function up()
     {
         Schema::create('members', function (Blueprint $table) {
-            $table->increments('id')->unique();
-            $table->string('username');
-            $table->string('rank')->default('Recruit');
+            $table->integer('id')->increments();
+            $table->string('username', 13)->primary();
+            $table->string('rank', 20)->default('Recruit');
             $table->string('xp')->default('0');
             $table->integer('kills')->default('0');
             $table->integer('total_level')->nullable();
             $table->string('total_xp')->nullable();
             $table->string('hiscore_rank')->nullable();
-            $table->enum('private', ['no', 'yes'])->default('no');
+            $table->enum('private', ['false', 'true'])->default('false');
             $table->timestamps();
         });
     }

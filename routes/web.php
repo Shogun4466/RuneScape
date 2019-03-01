@@ -11,10 +11,16 @@
 |
 */
 
-Route::get('/', 'PagesController@home');
+Route::get('/', 'PagesController@index');
 
 Route::get('/hiscore', 'PagesController@hiscore');
 
-Route::get('/member', 'PagesController@member');
+Route::get('/members', 'PagesController@members');
 
 Route::get('/about', 'PagesController@about');
+
+Route::get('/update-log', 'PagesController@updateLog');
+
+//Route::resource('member', 'MemberController');
+
+Route::get('member/{username}', 'MemberController@show');
