@@ -13,6 +13,8 @@ class PagesController extends Controller
     }
 
     public function hiscore() {
+        $pageTitle = "Hiscores";
+
         $cast = "CAST(total_xp AS INT) DESC";
 
         $hiscores = DB::table('members')
@@ -23,26 +25,32 @@ class PagesController extends Controller
             ->orderBy('hiscore_rank')
             ->get();
 
-        return view('hiscore', compact('hiscores'));
+        return view('hiscore', compact('hiscores', 'pageTitle'));
     }
 
     public function members() {
+        $pageTitle = "Members";
+
         $members = DB::table('members')
             ->select('username', 'rank', 'xp', 'kills')
             ->join('rank', 'members.rank', '=', 'rank.rank_title')
             ->orderBy('rank_id', 'DESC')
             ->get();
 
-        return view('members', compact('members'));
+        return view('members', compact('members', 'pageTitle'));
     }
 
     public function about() {
-        return view('about');
+        $pageTitle = "About";
+
+        return view('about', compact('pageTitle'));
     }
 
     public function updateLog() {
+        $pageTitle = "Update Log";
+
         $updateLogs = Member::orderBy('updated_at', 'DESC')->whereColumn('updated_at', '>', 'created_at')->get();
 
-        return view('update-log', compact('updateLogs'));
+        return view('update-log', compact('updateLogs', 'pageTitle'));
     }
 }

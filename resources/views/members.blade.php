@@ -1,15 +1,15 @@
-@extends('layout')
+@extends('layouts.layout')
 
 @section('title')
-    | Members
+    | {{ $pageTitle }}
 @endsection
 
 @section('content')
     <div class="page">
-        <span class="left"><a href="/">Home</a> <i class="fas fa-long-arrow-alt-right"></i> Members</span>
+        <span class="left"><a href="/">Home</a> <i class="fas fa-long-arrow-alt-right"></i> {{ $pageTitle }}</span>
         <span class="right">Next update:  </span>
 
-        <h1>Members</h1>
+        <h1>{{ $pageTitle }}</h1>
 
         <table>
             <tr>

@@ -24,3 +24,6 @@ Route::get('/update-log', 'PagesController@updateLog');
 //Route::resource('member', 'MemberController');
 
 Route::get('member/{username}', 'MemberController@show');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

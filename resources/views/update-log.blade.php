@@ -1,15 +1,15 @@
-@extends('layout')
+@extends('layouts.layout')
 
 @section('title')
-    | Update Log
+    | {{ $pageTitle }}
 @endsection
 
 @section('content')
     <div class="page">
-        <span class="left"><a href="/">Home</a> <i class="fas fa-long-arrow-alt-right"></i> Update Log</span>
+        <span class="left"><a href="/">Home</a> <i class="fas fa-long-arrow-alt-right"></i> {{ $pageTitle }}</span>
         <span class="right">Next update:  </span>
 
-        <h1>Update Log</h1>
+        <h1>{{ $pageTitle }}</h1>
 
         @foreach ($updateLogs as $log)
             <p>{{ $log->username }} <i class="fas fa-long-arrow-alt-right"></i> {{ \Carbon\Carbon::parse($log->updated_at)->format('d. M Y H:i') }}</p>

@@ -1,4 +1,4 @@
-@extends('content')
+@extends('layouts.layout')
 
 @section('footer')
     <table align="center">
